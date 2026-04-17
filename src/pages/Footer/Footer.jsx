@@ -1,54 +1,48 @@
 import React from 'react';
+import facebookImg from '../../assets/facebook.png'
+import igImg from '../../assets/instagram.png'
+import xImg from '../../assets/twitter.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white pt-12 pb-8 mt-auto">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer className="bg-[#1a3c34] text-white py-12 px-6 text-center">
+      <div className="max-w-5xl mx-auto">
         
-        {/* লোগো এবং ডেসক্রিপশন */}
-        <div className="space-y-4">
-          <div className="flex items-center gap-2 font-bold text-2xl text-indigo-400">
-            {/* লোগো ইমেজের জন্য জায়গা */}
-            <img src="/assets/logo.png" alt="Logo" className="w-8 h-8" /> 
-            <span>KeenKeeper</span>
+        {/* লোগো: আগের মতো রাখা হয়েছে */}
+        <h2 className="text-4xl font-bold mb-4 tracking-tight text-white">
+          KeenKeeper
+        </h2>
+        
+        {/* ডেসক্রিপশন: এক লাইনে করা হয়েছে */}
+        <p className="text-gray-200 text-base md:text-lg lg:text-xl mb-8 whitespace-nowrap overflow-hidden text-ellipsis">
+          Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
+        </p>
+
+        {/* সোশ্যাল লিংক সেকশন */}
+        <div className="mb-8">
+          <h3 className="text-lg font-medium mb-4 text-gray-300">
+            Social Links
+          </h3>
+          <div className="flex justify-center items-center gap-4">
+            <img src={facebookImg} alt="FB" className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full p-2 cursor-pointer hover:bg-emerald-400 transition-colors" />
+            <img src={igImg} alt="IG" className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full p-2 cursor-pointer hover:bg-emerald-400 transition-colors" />
+            <img src={xImg} alt="X" className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full p-2 cursor-pointer hover:bg-emerald-400 transition-colors" />
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed">
-            Keep your friendships thriving. Track your last contact and never lose touch with the people who matter most.
+        </div>
+
+        {/* পলিসি লিংকস: গ্যাপ কমিয়ে আনা হয়েছে */}
+        <div className="flex justify-center gap-6 text-sm md:text-base text-gray-300 mb-8">
+          <a href="#" className="hover:text-white transition">Privacy Policy</a>
+          <a href="#" className="hover:text-white transition">Cookies</a>
+          <a href="#" className="hover:text-white transition">Terms of Service</a>
+        </div>
+        
+        {/* কপিরাইট */}
+        <div className="pt-6 border-t border-white/10">
+          <p className="text-gray-400 text-sm md:text-base">
+            © 2026 KeenKeeper. All rights reserved.
           </p>
         </div>
-
-        {/* কুইক লিংকস */}
-        <div>
-          <h3 className="text-lg font-semibold mb-4 border-b border-gray-800 pb-2">Quick Links</h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            <li><a href="/" className="hover:text-indigo-400 transition">Home</a></li>
-            <li><a href="/timeline" className="hover:text-indigo-400 transition">Timeline</a></li>
-            <li><a href="/stats" className="hover:text-indigo-400 transition">Statistics</a></li>
-          </ul>
-        </div>
-
-        {/* সোশ্যাল মিডিয়া ইমেজের জন্য জায়গা */}
-        <div>
-          <h3 className="text-lg font-semibold mb-4 border-b border-gray-800 pb-2">Connect With Us</h3>
-          <div className="flex gap-4 mb-4">
-            {/* এখানে তোমার assets এর ইমেজগুলো বসাও */}
-            <a href="#" className="hover:opacity-80 transition">
-              <img src="/assets/github.png" alt="Github" className="w-6 h-6" />
-            </a>
-            <a href="#" className="hover:opacity-80 transition">
-              <img src="/assets/twitter.png" alt="Twitter" className="w-6 h-6" />
-            </a>
-            <a href="#" className="hover:opacity-80 transition">
-              <img src="/assets/linkedin.png" alt="Linkedin" className="w-6 h-6" />
-            </a>
-          </div>
-          <p className="text-gray-400 text-sm">support@keenkeeper.com</p>
-        </div>
-      </div>
-
-      {/* কপিরাইট অংশ */}
-      <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs">
-        <p>© 2026 KeenKeeper. All rights reserved.</p>
       </div>
     </footer>
   );
