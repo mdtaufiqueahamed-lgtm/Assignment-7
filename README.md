@@ -1,16 +1,36 @@
-# React + Vite
+KeenKeeper 🤝
+KeenKeeper is a sophisticated personal relationship management platform. It serves as a digital shelf for your most meaningful connections, helping you nurture and maintain bonds that matter most through organized data and visual insights.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌟 Project Overview
+Maintaining relationships in a busy world can be challenging. KeenKeeper simplifies this by providing a dedicated space to monitor how often you connect with friends and family. The application focuses on clarity, aesthetic appeal, and actionable analytics.
 
-Currently, two official plugins are available:
+✨ Key Features
+Relationship Management: A centralized dashboard to browse and manage your personal circle.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Friendship Analytics: A dedicated statistics section featuring interactive charts that break down your interaction types (Calls, Texts, and Videos).
 
-## React Compiler
+Visual Status Indicators: Clearly see the health of your connections—categorizing who is "On-track" and who might need a little more attention.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Modern & Responsive Design: A seamless experience across all devices, from large desktop monitors to mobile screens.
 
-## Expanding the ESLint configuration
+Optimized Navigation: Smooth, fast-loading transitions between the Home, Listed Books, and Analytics pages.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛠️ Built With
+React.js: For building a dynamic and component-based user interface.
+
+Tailwind CSS: For professional, utility-first styling and responsive layouts.
+
+React Router: For handling client-side routing and navigation.
+
+Recharts: For rendering beautiful, data-driven friendship analytics.
+
+📁 Project Structure
+The project follows a modular structure, separating logic into reusable components such as:
+
+Navbar & Footer: Consistent branding and navigation across the app.
+
+Stats Section: Advanced data visualization for interaction history.
+
+Error Handling: A custom-designed 404 page to guide users back to safety.
+
+Developed by [Sheikh Taufique Ahmed]

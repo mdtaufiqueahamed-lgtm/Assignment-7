@@ -11,7 +11,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
 
 const Stats = () => {
   return (
-    // এখানে h-[400px] নিশ্চিত করো
+    
     <div className="w-full bg-white p-5 rounded-xl shadow-md">
       <h2 className="text-2xl font-bold mb-4">Friendship Analytics</h2>
       <div style={{ width: '100%', height: 400 }}> 

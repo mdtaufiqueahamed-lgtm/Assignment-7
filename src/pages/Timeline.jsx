@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Timeline = () => {
-  // LocalStorage থেকে ডাটা আনা
+  
   const history = JSON.parse(localStorage.getItem('timeline')) || [];
 
   return (
@@ -23,4 +23,4 @@ const Timeline = () => {
   );
 };
 
-export default Timeline; // এই লাইনটি মিসিং থাকলে ওই এরর দেয়
+export default Timeline; 

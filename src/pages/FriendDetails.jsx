@@ -8,7 +8,7 @@ const FriendDetails = () => {
   const [friend, setFriend] = useState(null);
 
   useEffect(() => {
-    // JSON থেকে ডাটা লোড করা
+    
     fetch('/friends.json')
       .then(res => res.json())
       .then(data => {
@@ -17,7 +17,7 @@ const FriendDetails = () => {
       });
   }, [id]);
 
-  // বাটন ক্লিক করলে অ্যাকশন হ্যান্ডেল করার ফাংশন
+ 
   const handleAction = (type) => {
     const newEntry = {
       id: Date.now(),
@@ -26,11 +26,11 @@ const FriendDetails = () => {
       date: new Date().toLocaleString(),
     };
 
-    // LocalStorage এ ডাটা সেভ করা (যাতে Timeline পেজে দেখা যায়)
+  
     const existingTimeline = JSON.parse(localStorage.getItem('timeline')) || [];
     localStorage.setItem('timeline', JSON.stringify([newEntry, ...existingTimeline]));
 
-    // সাকসেস টোস্ট মেসেজ (Requirement 10.3)
+    
     toast.success(`${type} logged with ${friend.name}!`);
   };
 
@@ -41,7 +41,7 @@ const FriendDetails = () => {
       <Toaster position="top-center" reverseOrder={false} />
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* বাম পাশ: প্রোফাইল কার্ড */}
+        
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-fit text-center">
           <img 
             src={friend.picture} 
@@ -63,16 +63,16 @@ const FriendDetails = () => {
           </div>
         </div>
 
-        {/* ডান পাশ: স্ট্যাটস এবং কুইক অ্যাকশন */}
+      
         <div className="md:col-span-2 space-y-6">
-          {/* স্ট্যাটস গ্রিড */}
+        
           <div className="grid grid-cols-3 gap-4">
             <StatCard icon={<Clock size={20}/>} label="Last Contact" value={`${friend.days_since_contact} days`} color="text-blue-500" />
             <StatCard icon={<Target size={20}/>} label="Goal" value={`${friend.goal} days`} color="text-indigo-500" />
             <StatCard icon={<Calendar size={20}/>} label="Next Due" value={friend.next_due_date} color="text-orange-500" />
           </div>
 
-          {/* Quick Check-In (Requirement 6) */}
+          
           <div className="bg-white p-10 rounded-2xl shadow-sm border border-indigo-50 text-center">
             <h3 className="text-xl font-bold mb-8">Quick Check-In</h3>
             <div className="flex justify-center gap-10">
@@ -87,7 +87,7 @@ const FriendDetails = () => {
   );
 };
 
-// ছোট হেল্পার কম্পোনেন্টস
+
 const StatCard = ({ icon, label, value, color }) => (
   <div className="bg-white p-5 rounded-xl border border-gray-100 text-center shadow-sm">
     <div className={`flex justify-center mb-2 ${color}`}>{icon}</div>
